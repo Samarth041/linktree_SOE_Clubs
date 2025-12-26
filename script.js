@@ -13,7 +13,7 @@ const clubData = {
   "Non-Technical & Non-Cultural Clubs": [
     { name: "MEGAWHATS", link: "https://chat.whatsapp.com/BHa0lnGCerC1G2ZbDGPopV", logo: "megawhats.png", desc: "Quizzing & more" },
     { name: "PERSPECTIVES", link: "https://chat.whatsapp.com/C4VfUODZ8zjC9A8LDW5oAr", logo: "perspectives.png", desc: "Talks & debates" },
-    { name: "PALETTE", link: "https://chat.whatsapp.com/KECAviY9YhICNVUGPQCcoH", logo: "palette.png", desc: "Art & creativity" },
+    { name: "PALETTE", link: "https://chat.whatsapp.com/KECAviY9YhICNVUGPQCcoH", logo: "pallete.png", desc: "Art & creativity" },
     { name: "PHOENIX", link: "https://chat.whatsapp.com/G3DNF8Mp92b4qUT5thaDbe", logo: "phoenix.png", desc: "E-Cell" },
     { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" }
   ],
