@@ -1,114 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SOE JNU — Clubs Hub</title>
-<link rel="icon" type="image/jpeg" href="jnu.jpg">
-<style>
-  :root {
-    --bg:#f7f8fb;
-    --card:#ffffff;
-    --accent:#1e90ff;
-    --muted:#666;
-  }
-  * { box-sizing:border-box; }
-  body {
-    margin:0;
-    font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
-    background:var(--bg);
-    color:#111;
-  }
-  .wrap {
-    max-width:1080px;
-    margin:24px auto;
-    padding:18px;
-  }
-  header {
-    display:flex;
-    gap:14px;
-    align-items:center;
-    margin-bottom:20px;
-  }
-  header img.logo {
-    width:64px;
-    height:64px;
-    border-radius:12px;
-    object-fit:cover;
-  }
-  h1 { margin:0; font-size:1.4rem; }
-  p.lead { margin:4px 0 18px; color:var(--muted); }
-  h2.section-title {
-    margin:26px 0 12px;
-    font-size:1.1rem;
-    color:#333;
-    border-left:4px solid var(--accent);
-    padding-left:8px;
-  }
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:14px;
-  }
-  .card {
-    background:var(--card);
-    border-radius:12px;
-    padding:14px;
-    box-shadow:0 6px 18px rgba(20,20,30,0.05);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    transition:transform 0.2s;
-  }
-  .card:hover { transform:translateY(-4px); }
-  .logo-small {
-    width:64px;
-    height:64px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:10px;
-    border:2px solid #eee;
-    background:#fff;
-  }
-  .club-name {
-    font-weight:600;
-    margin:6px 0 6px;
-    font-size:1rem;
-  }
-  .desc {
-    font-size:0.85rem;
-    color:var(--muted);
-    margin-bottom:10px;
-  }
-  .btn {
-    display:inline-block;
-    padding:8px 12px;
-    border-radius:8px;
-    background:var(--accent);
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-  }
-  footer {
-    margin-top:28px;
-    text-align:center;
-    color:var(--muted);
-    font-size:0.86rem;
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SOE JNU — Clubs Hub</title>
+
+ 
+  <link rel="icon" type="image/jpeg" href="jnu.jpg">
+
+ 
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="wrap">
     <header>
-      
-      <img src="jnu.jpg" alt="SOE JNU" class="logo" onerror="this.style.display='none'">
+      <img
+        src="jnu.jpg"
+        alt="SOE JNU"
+        class="logo"
+        onerror="this.style.display='none'"
+      />
       <div>
         <h1>SOE JNU — Club Linktree</h1>
-        <p class="lead">20+ clubs. Tap a card to join the WhatsApp group.</p>
+        <p class="lead">
+          20+ clubs. Tap a card to join the WhatsApp group.
+        </p>
       </div>
     </header>
 
+   
     <main id="club-sections"></main>
 
     <footer>
@@ -116,105 +38,7 @@
     </footer>
   </div>
 
-<script>
-/* ==== DATA: Replace links + filenames ==== */
-const clubData = {
-  "Technical Clubs": [
-    { name: "GDGC", link: "https://linktr.ee/gdgcJNU", logo: "gdgc.png", desc: "Google Developer community" },
-    { name: "LOOP", link: "https://linktr.ee/loop.soe", logo: "LOOP.png", desc: "Development" },
-    { name: "COLD", link: "https://linktr.ee/CoLDJNU", logo: "cold.png", desc: "Competitive Programming" },
-    { name: "DEROBOTICA", link: "https://chat.whatsapp.com/El8f4p9BoNcBvE4HefZArZ?mode=ac_t", logo: "derobotica.jpg", desc: "Robotics" },
-    { name: "VOLT", link: "https://linktr.ee/qr/415cd30f-0be0-4655-80fb-028a7fe2077c?utm_source=qr_code", logo: "volt.png", desc: "Electronics & circuits" },
-    { name: "ANTARIKSH", link: "https://chat.whatsapp.com/BJkA3gMYdFvETTpT3QJYHE", logo: "antariksh.png", desc: "Space & aero" },
-    { name: "UAV AND DRONE CLUB", link: "https://chat.whatsapp.com/HQYWMrXaWdOFL2J5sFLjDJ?mode=ems_copy_t", logo: "uav.png", desc: "Drone enthusiasts" },
-  ],
-  "Non-Technical & Non-Cultural Clubs": [
-    { name: "MEGAWHATS", link: "https://chat.whatsapp.com/BHa0lnGCerC1G2ZbDGPopV", logo: "megawhats.png", desc: "Quizzing & more" },
-    { name: "PERSPECTIVES", link: "https://chat.whatsapp.com/C4VfUODZ8zjC9A8LDW5oAr?mode=ems_wa_t", logo: "perspectives.png", desc: "Talks & debates" },
-    { name: "PALETTE", link: "https://chat.whatsapp.com/KECAviY9YhICNVUGPQCcoH?mode=ems_wa_t", logo: "pallete.png", desc: "Art & creativity" },
-    { name: "PHOENIX", link: "https://chat.whatsapp.com/G3DNF8Mp92b4qUT5thaDbe?mode=ems_copy_t", logo: "phoenix.png", desc: "E-Cell" },
-    { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" },
-  ],
-  "Cultural Clubs": [
-    { name: "AKSHAR", link: "https://chat.whatsapp.com/DafiQIDrzZ7E4WxG5m12zW?mode=ems_wa_c", logo: "akshar.png", desc: "Literature & writing" },
-    { name: "ABHINAY", link: "https://chat.whatsapp.com/B4kskqkmI6H7vThgDhhIgs", logo: "abhinay.png", desc: "Drama & theatre" },
-    { name: "BANDISH", link: "https://chat.whatsapp.com/GhHAGHRdhLhKytyp55Bs4I", logo: "bandish.png", desc: "Music & singing" },
-    { name: "BAILAAMOR", link: "https://chat.whatsapp.com/EK5rB8c3EcMFjkdYHztouV?mode=ems_copy_t", logo: "bailaamor.png", desc: "Dance & culture" },
-  ],
-  "Sports Clubs": [
-    { name: "KREEDA", link: "https://chat.whatsapp.com/Bw6WR21bXzQ5HMx5175xhT?mode=ems_qr_t", logo: "kreeda.png", desc: "Sports activities" },
-    { name: "EPHIRIUM", link: "https://chat.whatsapp.com/EEJjKIjD7gj1ehpByk7Mbg", logo: "ephirium.png", desc: "E-sports & gaming" },
-    { name: "QUEEN'S SACRIFICE", link: "https://chat.whatsapp.com/CZssrLdYHbd1KEcEdJb7qw?mode=ems_copy_c", logo: "queensacrifice.png", desc: "Chess club" },
-    { name: "BLACKOUT", link: "https://chat.whatsapp.com/D4PrAXzbP7D0Sam1ZS7EYU?mode=ems_copy_t", logo: "blackout.jpg", desc: "Fitness and WeightLifting" },
-  ],
-  "Upcoming Clubs": [
-    { name: "MC²", link: " https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf?mode=ems_share_c",    logo: "mcsquarelogo.jpg", desc: "Management And Consulting" }
-  ]
-};
-
-/* ==== RENDER ==== */
-const container = document.getElementById('club-sections');
-
-Object.keys(clubData).forEach(section => {
-  // Section title
-  const h2 = document.createElement('h2');
-  h2.className = 'section-title';
-  h2.textContent = section;
-  container.appendChild(h2);
-
-  // Grid
-  const grid = document.createElement('div');
-  grid.className = 'grid';
-
-  clubData[section].forEach(c => {
-    const card = document.createElement('div');
-    card.className = 'card';
-
-    // logo
-    if (c.logo) {
-      const logoImg = document.createElement('img');
-      logoImg.className = 'logo-small';
-      logoImg.src = c.logo;
-      logoImg.alt = `${c.name} logo`;
-      logoImg.onerror = () => { logoImg.style.display = "none"; };
-      card.appendChild(logoImg);
-    }
-
-    // name + desc
-    const clubName = document.createElement('div');
-    clubName.className = 'club-name';
-    clubName.textContent = c.name;
-    card.appendChild(clubName);
-
-    if (c.desc) {
-      const desc = document.createElement('div');
-      desc.className = 'desc';
-      desc.textContent = c.desc;
-      card.appendChild(desc);
-    }
-
-    // button (only if link present)
-    if (c.link && c.link !== "#REPLACE") {
-      const btn = document.createElement('a');
-      btn.href = c.link;
-      btn.target = "_blank";
-      btn.rel = "noopener noreferrer";
-      btn.className = "btn";
-      btn.textContent = "Join WhatsApp";
-      card.appendChild(btn);
-    }
-
-    grid.appendChild(card);
-  });
-
-  container.appendChild(grid);
-});
-</script>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
