@@ -1,4 +1,4 @@
-/* ==== CLUB DATA ==== */
+/*  CLUB DATA  */
 const clubData = {
   "Technical Clubs": [
     { name: "GDGC", link: "https://linktr.ee/gdgcJNU", logo: "gdgc.png", desc: "Google Developer community" },
@@ -17,7 +17,7 @@ const clubData = {
     { name: "PHOENIX", link: "https://chat.whatsapp.com/G3DNF8Mp92b4qUT5thaDbe", logo: "phoenix.png", desc: "E-Cell" },
     { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" },
 
-    // ✅ Moved here
+
     { name: "MC²", link: "https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf", logo: "mcsquarelogo.jpg", desc: "Management & Consulting" }
   ],
 
