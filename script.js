@@ -15,7 +15,10 @@ const clubData = {
     { name: "PERSPECTIVES", link: "https://chat.whatsapp.com/C4VfUODZ8zjC9A8LDW5oAr", logo: "perspectives.png", desc: "Talks & debates" },
     { name: "PALETTE", link: "https://chat.whatsapp.com/KECAviY9YhICNVUGPQCcoH", logo: "pallete.png", desc: "Art & creativity" },
     { name: "PHOENIX", link: "https://chat.whatsapp.com/G3DNF8Mp92b4qUT5thaDbe", logo: "phoenix.png", desc: "E-Cell" },
-    { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" }
+    { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" },
+
+    // ✅ Moved here
+    { name: "MC²", link: "https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf", logo: "mcsquarelogo.jpg", desc: "Management & Consulting" }
   ],
 
   "Cultural Clubs": [
@@ -30,10 +33,6 @@ const clubData = {
     { name: "EPHIRIUM", link: "https://chat.whatsapp.com/EEJjKIjD7gj1ehpByk7Mbg", logo: "ephirium.png", desc: "E-sports & gaming" },
     { name: "QUEEN'S SACRIFICE", link: "https://chat.whatsapp.com/CZssrLdYHbd1KEcEdJb7qw", logo: "queensacrifice.png", desc: "Chess club" },
     { name: "BLACKOUT", link: "https://chat.whatsapp.com/D4PrAXzbP7D0Sam1ZS7EYU", logo: "blackout.jpg", desc: "Fitness & Weightlifting" }
-  ],
-
-  "Upcoming Clubs": [
-    { name: "MC²", link: "https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf", logo: "mcsquarelogo.jpg", desc: "Management & Consulting" }
   ]
 };
 
