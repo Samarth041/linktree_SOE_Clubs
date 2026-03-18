@@ -1,4 +1,4 @@
-/*  CLUB DATA  */
+/* ==== CLUB DATA ==== */
 const clubData = {
   "Technical Clubs": [
     { name: "GDGC", link: "https://linktr.ee/gdgcJNU", logo: "gdgc.png", desc: "Google Developer community" },
@@ -16,7 +16,6 @@ const clubData = {
     { name: "PALETTE", link: "https://chat.whatsapp.com/KECAviY9YhICNVUGPQCcoH", logo: "pallete.png", desc: "Art & creativity" },
     { name: "PHOENIX", link: "https://chat.whatsapp.com/G3DNF8Mp92b4qUT5thaDbe", logo: "phoenix.png", desc: "E-Cell" },
     { name: "DRUSHYAM", link: "https://chat.whatsapp.com/CTg4Hxofliv8Xzxf2oEKw3", logo: "drushyam.png", desc: "Film & photography" }
-    { name: "MC²", link: "https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf", logo: "mcsquarelogo.jpg", desc: "Management & Consulting" }
   ],
 
   "Cultural Clubs": [
@@ -33,7 +32,9 @@ const clubData = {
     { name: "BLACKOUT", link: "https://chat.whatsapp.com/D4PrAXzbP7D0Sam1ZS7EYU", logo: "blackout.jpg", desc: "Fitness & Weightlifting" }
   ],
 
-  
+  "Upcoming Clubs": [
+    { name: "MC²", link: "https://chat.whatsapp.com/IxKPLcOU5ixLeuhNCgpBOf", logo: "mcsquarelogo.jpg", desc: "Management & Consulting" }
+  ]
 };
 
 /* ==== RENDER ==== */
